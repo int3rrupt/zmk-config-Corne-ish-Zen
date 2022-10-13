@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define QWERTY   0
+#define DVORAK   0
 #define SPCNAV   1
 #define MEDNUM   2
 #define GFUNCT   3
@@ -29,11 +29,11 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "QWERTY";
+            label = "DVORAK";
             bindings = <
-                &none   &kp Q       &kp W       &kp E       &kp R       &kp T                                                  &kp Y            &kp U       &kp I       &kp O       &kp P           &none
-                &none   &hm LCTRL A &hm LALT S  &hm LGUI D  &hm LSHFT F &lt GFUNCT G                                           &kp H            &hm LSHFT J &hm LGUI K  &hm LALT L  &hm LCTRL SEMI  &none
-                &none   &kp Z       &kp X       &kp C       &kp V       &lt BTOOTH B                                           &kp N            &kp M       &kp COMMA   &kp DOT     &kp FSLH        &none
+                &none   &kp SQT     &kp COMMA   &kp DOT     &kp P       &kp Y                                                  &kp F            &kp G       &kp C       &kp R       &kp L        &none
+                &none   &hm LCTRL A &hm LALT O  &hm LGUI E  &hm LSHFT U &lt GFUNCT I                                           &lt GFUNCT D     &hm LSHFT H &hm LGUI T  &hm LALT N  &hm LCTRL S  &none
+                &none   &kp SEMI    &kp Q       &kp J       &kp K       &lt BTOOTH X                                           &kp B            &kp M       &kp W       &kp V       &kp Z        &none
                                                             &none       &lt MEDNUM RET  &lt SPCNAV SPACE     &lt SPCNAV SPACE  &lt MEDNUM BSPC  &none
             >;
         };
@@ -41,7 +41,7 @@
         lower_layer {
             label = "SPCNAV";
             bindings = <
-                &none   &kp ESC     &none       &none       &none       &kp TAB                     &kp BSLH    &kp SQT     &kp GRAVE   &kp LBKT    &kp RBKT    &none
+                &none   &kp ESC     &none       &none       &none       &kp TAB                     &kp BSLH    &kp GRAVE   &kp SLASH   &kp LBKT    &kp RBKT    &none
                 &none   &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &none                       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RET     &none
                 &none   &none       &none       &none       &none       &none                       &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp DEL     &none
                                                             &trans      &trans  &trans      &trans  &trans      &trans
